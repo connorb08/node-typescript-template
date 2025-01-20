@@ -1,0 +1,63 @@
+{
+    "folders": [
+        {
+            "name": "root",
+            "path": "."
+        },
+        {
+            "name": "devcontainer",
+            "path": ".devcontainer"
+        }
+    ],
+    "settings": {
+        /*
+         * Edit these
+         */
+        "prettier.prettierPath": "/workspaces/typescript-template/.yarn/sdks/prettier/index.cjs",
+        // File Nesting
+        "explorer.fileNesting.enabled": true,
+        "explorer.fileNesting.patterns": {
+            "tsconfig.json": "tsconfig.*.json, eslint.config.js, vitest.config.ts, prettier.config.js",
+            "package.json": "yarn.lock, .pnp.*, .yarnrc.yml, build.ts",
+            "README.md": "*.code-workspace, .gitignore, .editorconfig, .gitattributes, .prettierignore"
+        },
+        "files.exclude": {
+            "**/.git": true,
+            "**/.svn": true,
+            "**/.hg": true,
+            "**/CVS": true,
+            "**/.DS_Store": true,
+            "**/Thumbs.db": true,
+            ".vscode/": true,
+            ".devcontainer": true,
+            ".yarn": true,
+            ".pnp.*": true,
+            "yarn.lock": true
+        },
+        "search.exclude": {
+            "**/.yarn": true,
+            "**/.pnp.*": true
+        },
+        "typescript.tsdk": "root/.yarn/sdks/typescript/lib",
+        "typescript.enablePromptUseWorkspaceTsdk": true,
+        "eslint.nodePath": "root/.yarn/sdks",
+        // Settings
+        "editor.defaultFormatter": "esbenp.prettier-vscode",
+        "[javascript]": {
+            "editor.defaultFormatter": "esbenp.prettier-vscode"
+        },
+        "[typescript]": {
+            "editor.defaultFormatter": "esbenp.prettier-vscode"
+        },
+        "[json]": {
+            "editor.defaultFormatter": "esbenp.prettier-vscode"
+        },
+        "[jsonc]": {
+            "editor.defaultFormatter": "esbenp.prettier-vscode"
+        },
+        "editor.formatOnSave": true,
+        "editor.codeActionsOnSave": {
+            "source.fixAll.eslint": "explicit"
+        }
+    }
+}

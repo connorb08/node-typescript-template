@@ -1,0 +1,22 @@
+{
+    "name": "Template Typescript Dev Container",
+    "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
+    "features": {
+        "ghcr.io/devcontainers/features/node:1": {
+            "version": "v22.13.1"
+        },
+        "ghcr.io/rocker-org/devcontainer-features/apt-packages:1": {
+            "packages": "cloc"
+        }
+    },
+    "postStartCommand": "yarn install && yarn dlx @yarnpkg/sdks vscode",
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "esbenp.prettier-vscode",
+                "dbaeumer.vscode-eslint",
+                "arcanis.vscode-zipfs"
+            ]
+        }
+    }
+}
